@@ -13,15 +13,17 @@ const Navbar = () => {
         <div className="bg-white shadow">
             <div className="w-full flex flex-col md:flex-row container mx-auto">
                 {/* Menu Mobile  */}
-                <div className="flex flex-row justify-between py-4 px-6 md:px-0 items-center xs:w-full">
-                    <div>App Saya</div>
+                <div className="flex flex-row justify-between md:justify-start py-4 px-6 md:px-0 items-center w-full md:w-40">
+                    <div className="text-gray-500">App Saya</div>
                     <div className="flex flex-row md:hidden">
                         <SearchIcon className="w-4 h-4 text-gray-500 mr-4"/>
                         <ShoppingCartIcon className="w-4 h-4 text-gray-500 mr-4"/>
-                        <MenuIcon className="w-4 h-4 text-gray-500"/>
+                        <button type="button" onClick={()=>setShow(!show)} className="outline-none">
+                            <MenuIcon className="w-4 h-4 text-gray-500"/>
+                        </button>
                     </div>
                 </div>
-                <div className="flex flex-col md:flex-row items-center flex-grow">
+                <div className={`${show ? 'flex' : 'hidden'} flex-col md:flex-row items-center flex-grow`}>
                     <MenuDropdown title="Demos">
                         <Menu.Item>
                             {
@@ -73,14 +75,16 @@ const Navbar = () => {
                     
                 
                 </div>
-                <div className="flex items-center">
-                    <a href="/" className="h-full flex items-center px-4 mr-2">
+                <div className={`${show ? 'flex' : 'hidden'} flex-col md:flex-row w-full md:justify-end items-center`}>
+                    <a href="/" className="h-full flex items-center py-4 md:py-0 px-6 md:px-4 mr-2 w-full md:w-auto">
                         <ShoppingCartIcon className="h-4 w-4 text-gray-500"/>
                     </a>
-                    <a href="/" className="h-full flex items-center px-4 mr-2">
+                    <a href="/" className="h-full flex items-center py-4 md:py-0 px-6 md:px-4 mr-2 w-full md:w-auto">
                         <SearchIcon className="h-4 w-4 text-gray-500"/>
                     </a>
-                    <InputText />
+                    <InputText placeholder="Search" 
+                    className="border rounded text-sm px-4 py-2 outline-none focus:ring-1 focus:ring-gray-500 w-full md:w-auto" 
+                    />
                 </div>
                 
                 
