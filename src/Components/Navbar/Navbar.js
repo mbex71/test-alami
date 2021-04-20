@@ -23,7 +23,7 @@ const Navbar = () => {
                         </button>
                     </div>
                 </div>
-                <div className={`${show ? 'flex' : 'hidden'} flex-col md:flex-row items-center flex-grow`}>
+                <div className={`${show ? 'flex' : 'hidden md:flex'} flex-col md:flex-row items-center flex-grow`}>
                     <MenuDropdown title="Demos">
                         <Menu.Item>
                             {
@@ -75,7 +75,7 @@ const Navbar = () => {
                     
                 
                 </div>
-                <div className={`${show ? 'flex' : 'hidden'} flex-col md:flex-row w-full md:justify-end items-center`}>
+                <div className={`${show ? 'flex' : 'hidden md:flex'} flex-col md:flex-row w-full md:justify-end items-center`}>
                     <a href="/" className="h-full flex items-center py-4 md:py-0 px-6 md:px-4 mr-2 w-full md:w-auto">
                         <ShoppingCartIcon className="h-4 w-4 text-gray-500"/>
                     </a>

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+.bg-custom {
+    background-color: yellow;
+}
+
+.font-hand{
+    font-family: 'Dancing Script', cursive;
+}
+
+.box {
+    width: auto;
+    height:200px;
+    border: 1px solid black;
+    border-radius: 20px -120px 0 0;
+    background-color: red;
+}
