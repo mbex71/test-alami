@@ -9,8 +9,17 @@ React Tailwind Bolerplate package
 npm install 
 ```
 
-### Create `.env` file 
+### Run Development
+```
+npm start
+```
 
+## If you need an enviroment variable & run HTTPS on local, please follow these steps
+### Create `.env` file 
+```
+touch .env
+```
+set your variable in `.env` file
 ### Run development
 
 ```
