@@ -1,6 +1,7 @@
 import Navbar from 'Components/Navbar'
 import Food from 'assets/images/food.jpg'
-import { ThumbUpIcon, ArchiveIcon, PencilAltIcon, OfficeBuildingIcon } from '@heroicons/react/outline'
+import Hiasan from 'assets/images/hiasan.svg';
+import { ThumbUpIcon, ArchiveIcon, PencilAltIcon, OfficeBuildingIcon, ChatIcon, UserIcon, SearchIcon, ShoppingCartIcon } from '@heroicons/react/outline'
 import 'App.css';
 
 function App() {
@@ -8,15 +9,32 @@ function App() {
     <div>
       <Navbar />
 
-      <div style={{ backgroundImage:`url(${Food})`, minHeight:`90vh` }}
+      <div style={{ backgroundImage:`url(${Food})`,height:'90vh',backgroundRepeat:'no-repeat', backgroundPosition:'center', backgroundSize:'cover' }}
         className="flex flex-col justify-end"
       >
         
-        <div className="box">
-
-        </div>
+        <img src={Hiasan} alt="hiasan" className="absolute bottom-0"/>
         
       </div>
+
+      <div className="hidden md:flex fixed right-0 items-center top-1/2">
+        <div className="flex flex-col items-center justify-around bg-white w-12 h-48">
+          <a href="/">
+            <ChatIcon className="h-6 w-6 text-gray-500"/>
+          </a>
+          
+          <a href="/">
+            <UserIcon className="h-6 w-6 text-gray-500"/>
+          </a>
+          <a href="/">
+            <SearchIcon className="h-6 w-6 text-gray-500"/>
+          </a>
+          <a href="/">
+            <ShoppingCartIcon className="h-6 w-6 text-gray-500"/>
+          </a>
+        </div>
+      </div>
+      
 
       <div className="flex flex-col items-center justify-center py-24 text-center">
         <h1 className="text-4xl font-hand">Catering services in New York</h1>
